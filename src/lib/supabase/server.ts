@@ -17,9 +17,7 @@ export function createClient() {
             cookiesToSet.forEach(({ name, value, options }) =>
               cookieStore.set(name, value, options)
             )
-          } catch {
-            // Server component — cookies can't be set from RSC
-          }
+          } catch {}
         },
       },
     }
