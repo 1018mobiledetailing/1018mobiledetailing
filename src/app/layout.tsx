@@ -3,6 +3,8 @@ import './globals.css'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { FamilyProvider } from '@/contexts/FamilyContext'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'HomeHQ',
   description: 'Family household management',
