@@ -136,6 +136,24 @@ a{color:inherit;text-decoration:none}
 .pc-btn-fill:hover{background:var(--blue2)}
 .pricing-note{margin-top:1.75rem;background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:8px;padding:1rem 1.2rem;font-size:.84rem;color:var(--silver);line-height:1.65}
 .pricing-note strong{color:var(--gold)}
+.pricing-intro{margin-bottom:1.5rem;background:linear-gradient(135deg,var(--panel),#16212e);border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:10px;padding:1.25rem 1.35rem;color:var(--silver);font-size:.88rem;line-height:1.7}
+.pricing-intro strong{display:block;color:var(--white);font-family:var(--fd);font-size:1.35rem;letter-spacing:.03em;margin-bottom:.25rem}
+.pricing-intro p+p{margin-top:.7rem}
+.pc-best{color:var(--white);font-size:.79rem;line-height:1.55;margin:-.25rem 0 .9rem}
+.pc-best strong{color:var(--blue)}
+.pc-disclaimer{color:var(--muted);font-size:.7rem;line-height:1.5;margin:-.3rem 0 1rem}
+
+#policies{background:var(--black)}
+.policy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+.policy-card{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.75rem}
+.policy-card h3{font-family:var(--fd);font-size:1.65rem;letter-spacing:.03em;margin-bottom:.45rem}
+.policy-lead{color:var(--white);font-weight:700;font-size:.92rem;margin-bottom:.65rem}
+.policy-card>p{color:var(--silver);font-size:.84rem;line-height:1.65}
+.policy-list{list-style:none;margin-top:1rem}
+.policy-list li{border-top:1px solid var(--border);padding:.75rem 0;color:var(--silver);font-size:.82rem;line-height:1.6}
+.policy-list strong{display:block;color:var(--blue);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.12rem}
+.policy-note{margin-top:1.25rem;background:var(--panel);border-left:3px solid var(--gold);border-radius:7px;padding:.9rem 1rem;color:var(--silver);font-size:.78rem;line-height:1.6}
+.policy-note strong{color:var(--gold)}
 
 #gallery{background:var(--black)}
 .ba-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.25rem}
@@ -257,6 +275,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
   .gbp-row{grid-template-columns:1fr}
   .quote-wrap{grid-template-columns:1fr;gap:2rem}
   .comm-row{grid-template-columns:1fr}
+  .policy-grid{grid-template-columns:1fr}
 }
 @media(max-width:680px){
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(6,6,6,.97);border-top:1px solid var(--border);padding:1rem 5%;gap:.9rem}
@@ -282,6 +301,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
   <ul class="nav-links" id="nl">
     <li><a href="#gallery">Our Work</a></li>
     <li><a href="#services">Pricing</a></li>
+    <li><a href="#policies">Policies</a></li>
     <li><a href="#area">Service Area</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#quote" class="nav-cta">Get a Quote</a></li>
@@ -341,39 +361,80 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
   <div class="container">
     <p class="sec-label">What We Do</p>
     <h2 class="sec-title">Services and Pricing</h2>
-    <p class="sec-sub">Clear pricing, no surprises. Starting rates shown below. Every quote is confirmed before any work begins.</p>
+    <p class="sec-sub">Professional detailing priced for real life. Published rates are starting prices for vehicles in normal condition, and most customers will fall close to the listed price.</p>
+
+    <div class="pricing-intro">
+      <strong>Honest pricing. No surprises.</strong>
+      <p>Some vehicles require considerably more time, labor, chemicals, extraction, or specialty treatment. Heavy pet hair, severe staining, excessive trash, mud, sand, bodily fluids, mold, smoke contamination, or extreme neglect may increase the final price.</p>
+      <p>We will communicate any meaningful price change before performing additional chargeable work whenever reasonably possible. You should not have to own a show car to afford a clean car. Our goal is to keep routine detailing affordable while pricing unusually labor-intensive vehicles fairly.</p>
+    </div>
 
     <div class="price-grid">
 
       <div class="price-card">
         <p class="pc-cat">Auto Care</p>
-        <h3 class="pc-name">Essential Wash</h3>
-        <div class="pc-price">$75 <small>sedan, SUV from $95</small></div>
-        <p class="pc-desc">A step up from a normal car wash. This is not a full detail. Exterior hand wash, wheels and tires cleaned, vacuum, and a wipe down of interior surfaces.</p>
+        <h3 class="pc-name">Essential Detail</h3>
+        <div class="pc-price">$95 <small>starting</small></div>
+        <p class="pc-desc">A practical refresh for vehicles that need a good cleanup without a full restorative detail.</p>
         <ul class="pc-list">
           <li>Exterior hand wash and dry</li>
           <li>Wheel and tire clean plus dressing</li>
           <li>Interior vacuum</li>
           <li>Interior wipe down</li>
+          <li>Interior and exterior glass</li>
         </ul>
-        <a href="#quote" class="pc-btn pc-btn-ghost">Book This</a>
+        <p class="pc-best"><strong>Best for:</strong> regularly maintained vehicles and an affordable professional cleanup.</p>
+        <p class="pc-disclaimer">Starting price assumes normal vehicle condition. Excessive soil, pet hair, stains, trash, sand, mud, or specialty cleaning may require an additional quote.</p>
+        <a href="#quote" class="pc-btn pc-btn-ghost">Book This Service</a>
       </div>
 
       <div class="price-card hot">
         <span class="pc-badge">Most Popular</span>
         <p class="pc-cat">Auto Detailing</p>
         <h3 class="pc-name">Full Detail</h3>
-        <div class="pc-price">$225 <small>sedan, SUV/Truck from $275</small></div>
-        <p class="pc-desc">A complete inside and out transformation. We take our time and do it right.</p>
+        <div class="pc-price">$225 <small>starting</small></div>
+        <p class="pc-desc">A complete inside-and-out detail designed to bring your vehicle back to a clean, comfortable, well-maintained condition.</p>
         <ul class="pc-list">
-          <li>Full exterior wash and spray wax</li>
+          <li>Complete exterior detail</li>
+          <li>Protection matched to the selected service</li>
           <li>Wheel, tire, and wheel well clean</li>
-          <li>Deep interior vacuum and wipe down</li>
-          <li>Carpet and fabric cleaning as needed</li>
-          <li>Leather conditioning</li>
+          <li>Thorough interior cleaning</li>
+          <li>Carpet, fabric, and leather care as needed</li>
           <li>All glass cleaned inside and out</li>
         </ul>
-        <a href="#quote" class="pc-btn pc-btn-fill">Book This</a>
+        <p class="pc-best"><strong>Best for:</strong> vehicles needing more than routine maintenance but not restoration-level cleaning.</p>
+        <p class="pc-disclaimer">Larger vehicles or vehicles requiring significant additional labor may cost more. Material price changes will be discussed before additional chargeable work whenever reasonably possible.</p>
+        <a href="#quote" class="pc-btn pc-btn-fill">Book This Service</a>
+      </div>
+
+      <div class="price-card">
+        <p class="pc-cat">Auto Restoration</p>
+        <h3 class="pc-name">Deep Clean / Restoration</h3>
+        <div class="pc-price" style="font-size:1.3rem">Custom Quote</div>
+        <p class="pc-desc">For vehicles requiring substantially more labor than a standard detail. Send photos for an estimate; extreme conditions may require an in-person evaluation.</p>
+        <ul class="pc-list">
+          <li>Heavy pet-hair removal</li>
+          <li>Significant stain treatment or extraction</li>
+          <li>Excessive sand, mud, trash, or food debris</li>
+          <li>Smoke or odor treatment</li>
+          <li>Severe neglect or specialty contamination</li>
+        </ul>
+        <a href="#quote" class="pc-btn pc-btn-ghost">Send Vehicle Photos</a>
+      </div>
+
+      <div class="price-card">
+        <p class="pc-cat">Recurring Care</p>
+        <h3 class="pc-name">Maintenance Detail</h3>
+        <div class="pc-price">$85 <small>plans from, based on frequency</small></div>
+        <p class="pc-desc">Regular service rewards customers who keep their vehicles on schedule. A maintained vehicle takes less restorative work, helping us keep this service affordable.</p>
+        <ul class="pc-list">
+          <li>Pricing based on frequency, size, and condition</li>
+          <li>Established $85 customers keep that rate while qualifying</li>
+          <li>No standard booking deposit for qualifying appointments</li>
+          <li>Restorative cleaning may be needed after a missed interval</li>
+        </ul>
+        <p class="pc-disclaimer">The vehicle must remain within normal maintenance condition. Service beyond the normal interval may require a different detail before maintenance pricing resumes.</p>
+        <a href="#quote" class="pc-btn pc-btn-ghost">Ask About Maintenance Plans</a>
       </div>
 
       <div class="price-card">
@@ -431,7 +492,41 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
       </div>
 
     </div>
-    <div class="pricing-note"><strong>Pricing Note:</strong> All prices listed are starting rates. Final pricing depends on vehicle or property size, condition, and travel distance. You will always get a confirmed quote before any work begins.</div>
+    <div class="pricing-note"><strong>Pricing Note:</strong> Prices shown are starting prices based on vehicle size and normal condition. Excessive pet hair, stains, trash, sand, mud, contamination, severe neglect, or additional requested labor may increase the final price. Material changes will be discussed before additional chargeable work whenever reasonably possible.</div>
+  </div>
+</section>
+
+<section id="policies" class="sec">
+  <div class="container">
+    <p class="sec-label">Before You Book</p>
+    <h2 class="sec-title">Booking and Cancellation Policies</h2>
+    <p class="sec-sub">Your appointment reserves travel time, equipment, setup time, and a portion of our workday specifically for you.</p>
+
+    <div class="policy-grid">
+      <article class="policy-card">
+        <h3>Booking Deposit</h3>
+        <p class="policy-lead">Your appointment time is reserved for you.</p>
+        <p>Most non-maintenance appointments require a deposit of approximately 25% of the estimated service total, generally with a $25 minimum and $100 maximum.</p>
+        <ul class="policy-list">
+          <li><strong>Applied to your balance</strong>The deposit is credited 100% toward your service balance. It is not an additional fee.</li>
+          <li><strong>Maintenance appointments</strong>Qualifying recurring Maintenance Detail appointments do not require the standard deposit.</li>
+          <li><strong>Specialty work</strong>Larger, specialty, multi-vehicle, or high-value appointments may require a different deposit amount.</li>
+        </ul>
+      </article>
+
+      <article class="policy-card">
+        <h3>Cancellation and Rescheduling</h3>
+        <p class="policy-lead">We understand that life happens.</p>
+        <ul class="policy-list">
+          <li><strong>24+ hours notice</strong>You may cancel or reschedule. Any deposit may be transferred to a replacement appointment or refunded according to the circumstances.</li>
+          <li><strong>Less than 24 hours notice</strong>The booking deposit may be forfeited.</li>
+          <li><strong>Same-day cancellation or no-show</strong>The deposit may be forfeited if you cancel on the service date, are unavailable, or cannot provide reasonable vehicle access.</li>
+          <li><strong>Weather</strong>If 1018 Mobile Detailing determines weather or unsafe conditions require rescheduling, your deposit is protected and may be transferred or refunded.</li>
+          <li><strong>Emergencies</strong>We reserve the right to make reasonable exceptions. This policy prevents avoidable last-minute cancellations; it is not meant to punish genuine emergencies.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="policy-note"><strong>Booking notice:</strong> A booking deposit may be required to reserve non-maintenance appointments. Deposits are applied toward the final balance. Cancellations with less than 24 hours notice or same-day no-shows may result in forfeiture of the deposit.</div>
   </div>
 </section>
 
@@ -679,7 +774,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
       <div class="quote-info">
         <p class="sec-label">Get In Touch</p>
         <h2 class="sec-title">Request a<br>Quote</h2>
-        <p>Fill out the form and we will reach back out to confirm your appointment. No deposit required, just let us know where to show up.</p>
+        <p>Fill out the form and we will reach back out with the right service and fairest price for your vehicle. A booking deposit may be required when you choose an appointment time.</p>
         <div class="contact-rows">
           <div class="contact-row"><span class="contact-icon">&#128222;</span><span><a href="tel:+13367507402">(336) 750-7402</a></span></div>
           <div class="contact-row"><span class="contact-icon">&#9993;</span><span><a href="mailto:1018mobiledetailing@gmail.com">1018mobiledetailing@gmail.com</a></span></div>
@@ -688,6 +783,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
         <div class="contact-btns">
           <a href="tel:+13367507402" class="btn btn-green btn-full">Call Now</a>
           <a href="sms:+13367507402" class="btn btn-ghost btn-full">Send a Text</a>
+          <a href="#policies" class="btn btn-ghost btn-full">View Cancellation Policy</a>
         </div>
       </div>
 
@@ -708,10 +804,10 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
           <select class="finput" id="sv" required>
             <option value="" disabled selected>Select a service</option>
             <optgroup label="Auto Care">
-              <option>Essential Wash, Sedan ($75)</option>
-              <option>Essential Wash, SUV/Truck ($95)</option>
-              <option>Full Detail, Sedan ($225)</option>
-              <option>Full Detail, SUV/Truck ($275)</option>
+              <option>Essential Detail (starting at $95)</option>
+              <option>Full Detail (starting at $225)</option>
+              <option>Deep Clean / Restoration Detail (custom quote)</option>
+              <option>Recurring Maintenance Detail (plans from $85)</option>
             </optgroup>
             <optgroup label="Pressure Washing">
               <option>Driveway / Concrete (quote)</option>
@@ -740,10 +836,21 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
         </div>
         <div class="fgrp"><label class="flabel" for="ad">Service Address</label><input class="finput" type="text" id="ad" placeholder="123 Main St, Winston Salem, NC" required></div>
         <div class="fgrp"><label class="flabel" for="vh">Vehicle / Property Info</label><input class="finput" type="text" id="vh" placeholder="Example, 2021 Ford F-150, dark blue"></div>
+        <div class="fgrp">
+          <label class="flabel" for="cn">Vehicle Condition</label>
+          <select class="finput" id="cn" required>
+            <option value="" disabled selected>Select the closest match</option>
+            <option>Maintained - routine dirt/dust; regularly cleaned</option>
+            <option>Average - normal daily use; some buildup or light staining</option>
+            <option>Needs Extra Attention - pet hair, staining, sand, mud, trash, or heavy buildup</option>
+            <option>Heavily Neglected / Restoration - severe staining, odors, contamination, or extensive labor</option>
+          </select>
+        </div>
+        <div class="pricing-note" style="margin:0 0 .9rem"><strong>Photos help us price fairly:</strong> Please send photos of the front seats, rear seats, floors/carpets, cargo area, and any stains, pet hair, spills, or problem areas by text or email after submitting this form. A dirty vehicle does not automatically mean an expensive detail.</div>
         <div class="fgrp"><label class="flabel" for="nt">Notes</label><textarea class="finput" id="nt" placeholder="Pet hair, stains, siding type, gate code, anything helpful"></textarea></div>
 
         <button type="button" class="fsub" id="fsb" onclick="sendQuote()">Send Quote Request</button>
-        <p class="fnote">No payment required. We will confirm by phone or text.</p>
+        <p class="fnote">No payment is collected with this quote request. A booking deposit may be required later and is applied to your final balance. By booking, you agree to the 1018 Mobile Detailing terms and policies above.</p>
       </div>
     </div>
   </div>
@@ -760,12 +867,13 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
   <nav class="foot-nav">
     <a href="#gallery">Our Work</a>
     <a href="#services">Pricing</a>
+    <a href="#policies">Terms &amp; Policies</a>
     <a href="#area">Service Area</a>
     <a href="#reviews">Reviews</a>
     <a href="#quote">Get a Quote</a>
     <a href="tel:+13367507402">Call Us</a>
   </nav>
-  <p class="foot-copy">Copyright 2025 1018 Mobile Detailing. All rights reserved.</p>
+  <p class="foot-copy">Copyright 2026 1018 Mobile Detailing. All rights reserved.</p>
 </footer>
 
 <button id="top-btn" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">Up</button>
@@ -808,7 +916,8 @@ function sendQuote(){
     {id:'ph', label:'Phone'},
     {id:'sv', label:'Service'},
     {id:'dt', label:'Date'},
-    {id:'ad', label:'Address'}
+    {id:'ad', label:'Address'},
+    {id:'cn', label:'Vehicle Condition'}
   ];
 
   for(var i=0;i<fields.length;i++){
@@ -837,7 +946,9 @@ function sendQuote(){
     'Time:     ' + (document.getElementById('tm').value || 'No preference') + '\n' +
     'Address:  ' + document.getElementById('ad').value + '\n' +
     'Vehicle:  ' + (document.getElementById('vh').value || 'Not specified') + '\n' +
+    'Condition:' + document.getElementById('cn').value + '\n' +
     'Notes:    ' + (document.getElementById('nt').value || 'None') + '\n' +
+    'Photos:   Customer asked to send photos by text or email\n' +
     '================================';
 
   var subject = encodeURIComponent('Quote Request, ' + document.getElementById('fn').value + ' ' + document.getElementById('ln').value);
