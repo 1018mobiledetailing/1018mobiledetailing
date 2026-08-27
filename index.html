@@ -134,6 +134,9 @@ a{color:inherit;text-decoration:none}
 .pc-btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
 .pc-btn-fill{background:var(--blue);color:#fff;border:none}
 .pc-btn-fill:hover{background:var(--blue2)}
+.pc-contact{display:block;text-align:center;margin-top:.65rem;color:var(--silver);font-size:.76rem}
+.pc-contact a{color:var(--blue);font-weight:700}
+.pc-contact a:hover{text-decoration:underline}
 .pricing-note{margin-top:1.75rem;background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:8px;padding:1rem 1.2rem;font-size:.84rem;color:var(--silver);line-height:1.65}
 .pricing-note strong{color:var(--gold)}
 .pricing-intro{margin-bottom:1.5rem;background:linear-gradient(135deg,var(--panel),#16212e);border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:10px;padding:1.25rem 1.35rem;color:var(--silver);font-size:.88rem;line-height:1.7}
@@ -166,6 +169,12 @@ a{color:inherit;text-decoration:none}
 .ba-tag{position:absolute;top:7px;left:7px;font-size:.6rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .5rem;border-radius:4px}
 .ba-tag.b4{background:rgba(239,68,68,.9);color:#fff}
 .ba-tag.af{background:rgba(34,197,94,.9);color:#fff}
+.latest-work{margin-bottom:2.4rem}
+.latest-work .ba-img{aspect-ratio:3/4}
+.latest-work .ba-img img{object-position:center}
+.latest-highlights{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:2.5rem}
+.latest-highlights .single-img-card .si-wrap{aspect-ratio:16/10}
+.latest-highlights .si-copy{padding:.9rem 1rem;color:var(--silver);font-size:.82rem}
 
 .single-img-card{background:var(--card);border:1px solid var(--border);border-radius:11px;overflow:hidden;transition:border-color .2s,transform .2s}
 .single-img-card:hover{border-color:var(--gold);transform:translateY(-4px)}
@@ -284,6 +293,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
   .hero-photos{grid-template-columns:1fr 1fr}
   .hero-photos .hp-slot:last-child{display:none}
   .frow{grid-template-columns:1fr}
+  .latest-highlights{grid-template-columns:1fr}
   .qform{padding:1.3rem}
   .action-bar{flex-direction:column}
   .action-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.2)}
@@ -341,7 +351,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
     </div>
 
     <div class="trust-strip">
-      <div class="trust-item"><span class="trust-num">5 Star</span><span class="trust-lbl">Google Rating</span></div>
+      <div class="trust-item"><span class="trust-num">5.0</span><span class="trust-lbl">13 Google Reviews</span></div>
       <div class="trust-item"><span class="trust-num">100%</span><span class="trust-lbl">Mobile Service</span></div>
       <div class="trust-item"><span class="trust-num">Insured</span><span class="trust-lbl">Backed By Coverage</span></div>
       <div class="trust-item"><span class="trust-num">We Come To You</span><span class="trust-lbl">Anywhere In Range</span></div>
@@ -375,7 +385,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
       <div class="price-card">
         <p class="pc-cat">Auto Care</p>
         <h3 class="pc-name">Essential Detail</h3>
-        <div class="pc-price">$95 <small>starting</small></div>
+        <div class="pc-price">$150 <small>starting</small></div>
         <p class="pc-desc">A practical refresh for vehicles that need a good cleanup without a full restorative detail.</p>
         <ul class="pc-list">
           <li>Exterior hand wash and dry</li>
@@ -386,13 +396,14 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
         </ul>
         <p class="pc-best"><strong>Best for:</strong> regularly maintained vehicles and an affordable professional cleanup.</p>
         <p class="pc-disclaimer">Starting price assumes normal vehicle condition. Excessive soil, pet hair, stains, trash, sand, mud, or specialty cleaning may require an additional quote.</p>
-        <a href="#quote" class="pc-btn pc-btn-ghost">Book This Service</a>
+        <a href="#quote" class="pc-btn pc-btn-ghost">Get an Essential Quote</a>
+        <span class="pc-contact">or <a href="sms:+13367507402">call or text (336) 750-7402</a></span>
       </div>
 
       <div class="price-card hot">
         <span class="pc-badge">Most Popular</span>
         <p class="pc-cat">Auto Detailing</p>
-        <h3 class="pc-name">Full Detail</h3>
+        <h3 class="pc-name">Premium Detail</h3>
         <div class="pc-price">$225 <small>starting</small></div>
         <p class="pc-desc">A complete inside-and-out detail designed to bring your vehicle back to a clean, comfortable, well-maintained condition.</p>
         <ul class="pc-list">
@@ -405,7 +416,8 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
         </ul>
         <p class="pc-best"><strong>Best for:</strong> vehicles needing more than routine maintenance but not restoration-level cleaning.</p>
         <p class="pc-disclaimer">Larger vehicles or vehicles requiring significant additional labor may cost more. Material price changes will be discussed before additional chargeable work whenever reasonably possible.</p>
-        <a href="#quote" class="pc-btn pc-btn-fill">Book This Service</a>
+        <a href="#quote" class="pc-btn pc-btn-fill">Get a Premium Quote</a>
+        <span class="pc-contact">or <a href="sms:+13367507402">call or text (336) 750-7402</a></span>
       </div>
 
       <div class="price-card">
@@ -421,12 +433,13 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
           <li>Severe neglect or specialty contamination</li>
         </ul>
         <a href="#quote" class="pc-btn pc-btn-ghost">Send Vehicle Photos</a>
+        <span class="pc-contact">or <a href="sms:+13367507402">text photos for a quote</a></span>
       </div>
 
       <div class="price-card">
         <p class="pc-cat">Recurring Care</p>
         <h3 class="pc-name">Maintenance Detail</h3>
-        <div class="pc-price">$85 <small>plans from, based on frequency</small></div>
+        <div class="pc-price" style="font-size:1.3rem">Custom Quote</div>
         <p class="pc-desc">Regular service rewards customers who keep their vehicles on schedule. A maintained vehicle takes less restorative work, helping us keep this service affordable.</p>
         <ul class="pc-list">
           <li>Pricing based on frequency, size, and condition</li>
@@ -436,12 +449,13 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
         </ul>
         <p class="pc-disclaimer">The vehicle must remain within normal maintenance condition. Service beyond the normal interval may require a different detail before maintenance pricing resumes.</p>
         <a href="#quote" class="pc-btn pc-btn-ghost">Ask About Maintenance Plans</a>
+        <span class="pc-contact">or <a href="sms:+13367507402">call or text for pricing</a></span>
       </div>
 
       <div class="price-card">
         <p class="pc-cat">Pressure Washing</p>
         <h3 class="pc-name">Driveway and Concrete</h3>
-        <div class="pc-price">$120 <small>starting, up to 1,000 sq ft</small></div>
+        <div class="pc-price" style="font-size:1.3rem">Custom Quote</div>
         <p class="pc-desc">Oil stains, mold, and built up grime removed from concrete, asphalt, and pavers. Final price confirmed after seeing the space.</p>
         <ul class="pc-list">
           <li>High pressure concrete clean</li>
@@ -449,12 +463,13 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
           <li>Sidewalks and walkways included</li>
         </ul>
         <a href="#quote" class="pc-btn pc-btn-ghost">Request a Quote</a>
+        <span class="pc-contact">or <a href="sms:+13367507402">call or text for pricing</a></span>
       </div>
 
       <div class="price-card">
         <p class="pc-cat">Pressure Washing</p>
         <h3 class="pc-name">House Exterior</h3>
-        <div class="pc-price">$250 <small>starting, up to 2,000 sq ft</small></div>
+        <div class="pc-price" style="font-size:1.3rem">Custom Quote</div>
         <p class="pc-desc">Soft wash technique, safe on vinyl, fiber cement, and wood siding. Final price confirmed after seeing the home.</p>
         <ul class="pc-list">
           <li>Soft wash, vinyl safe low pressure</li>
@@ -463,6 +478,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
           <li>Covered entryways and porches</li>
         </ul>
         <a href="#quote" class="pc-btn pc-btn-ghost">Request a Quote</a>
+        <span class="pc-contact">or <a href="sms:+13367507402">call or text for pricing</a></span>
       </div>
 
       <div class="price-card">
@@ -477,23 +493,25 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
           <li>Recurring fleet scheduling</li>
         </ul>
         <a href="#quote" class="pc-btn pc-btn-ghost">Get a Quote</a>
+        <span class="pc-contact">or <a href="sms:+13367507402">call or text for pricing</a></span>
       </div>
 
       <div class="price-card">
         <p class="pc-cat">Add Ons</p>
         <h3 class="pc-name">Extras</h3>
-        <div class="pc-price" style="font-size:1.1rem;color:var(--silver);font-weight:500">From <span style="color:var(--gold);font-size:1.6rem;font-weight:800">$30</span></div>
+        <div class="pc-price" style="font-size:1.3rem">Ask for Pricing</div>
         <p class="pc-desc">Upgrade any service with these add ons.</p>
         <ul class="pc-list">
-          <li>Pet hair removal, $40</li>
-          <li>Odor treatment, $30</li>
-          <li>Deck and patio wash, from $85</li>
+          <li>Pet hair removal</li>
+          <li>Odor treatment</li>
+          <li>Deck and patio wash</li>
         </ul>
-        <a href="#quote" class="pc-btn pc-btn-ghost">Add to Booking</a>
+        <a href="#quote" class="pc-btn pc-btn-ghost">Request Add-On Pricing</a>
+        <span class="pc-contact">or <a href="sms:+13367507402">call or text for pricing</a></span>
       </div>
 
     </div>
-    <div class="pricing-note"><strong>Pricing Note:</strong> Prices shown are starting prices based on vehicle size and normal condition. Excessive pet hair, stains, trash, sand, mud, contamination, severe neglect, or additional requested labor may increase the final price. Material changes will be discussed before additional chargeable work whenever reasonably possible.</div>
+    <div class="pricing-note"><strong>Pricing Note:</strong> Essential and Premium prices are starting rates. All other services are quoted individually based on size, condition, travel distance, and required labor. Material changes will be discussed before additional chargeable work whenever reasonably possible.</div>
   </div>
 </section>
 
@@ -536,6 +554,34 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
     <p class="sec-label">The Work Speaks</p>
     <h2 class="sec-title">Before and After</h2>
     <p class="sec-sub">Real jobs. No filters, no staging.</p>
+
+    <div class="ba-grid latest-work">
+      <div class="ba-card"><div class="ba-imgs">
+        <div class="ba-img"><img src="assets/latest-work/white-seat-before.jpg" alt="Stained white leather seat before detailing" loading="lazy"><span class="ba-tag b4">Before</span></div>
+        <div class="ba-img"><img src="assets/latest-work/white-seat-after.jpg" alt="Restored white leather seat after detailing" loading="lazy"><span class="ba-tag af">After</span></div>
+      </div></div>
+      <div class="ba-card"><div class="ba-imgs">
+        <div class="ba-img"><img src="assets/latest-work/honda-interior-before.jpg" alt="Honda interior before mobile detailing" loading="lazy"><span class="ba-tag b4">Before</span></div>
+        <div class="ba-img"><img src="assets/latest-work/honda-interior-after.jpg" alt="Honda interior after mobile detailing" loading="lazy"><span class="ba-tag af">After</span></div>
+      </div></div>
+      <div class="ba-card"><div class="ba-imgs">
+        <div class="ba-img"><img src="assets/latest-work/rav4-before.jpg" alt="Toyota RAV4 exterior before final detailing" loading="lazy"><span class="ba-tag b4">Before</span></div>
+        <div class="ba-img"><img src="assets/latest-work/rav4-after.jpg" alt="Toyota RAV4 polished exterior after detailing" loading="lazy"><span class="ba-tag af">After</span></div>
+      </div></div>
+    </div>
+
+    <div class="latest-highlights">
+      <div class="single-img-card">
+        <div class="si-wrap"><img src="assets/latest-work/honda-exterior-after.jpg" alt="Finished Honda exterior detail" loading="lazy"><span class="si-feature">Finished Detail</span></div>
+        <p class="si-copy">Glossy exterior finish with clean wheels and dressed tires.</p>
+      </div>
+      <div class="single-img-card">
+        <div class="si-wrap"><img src="assets/latest-work/engine-bay-after.jpg" alt="Clean Toyota engine bay after detailing" loading="lazy"><span class="si-feature">Engine Bay</span></div>
+        <p class="si-copy">A clean, carefully finished engine bay.</p>
+      </div>
+    </div>
+
+    <p class="sec-label">More Transformations</p>
 
     <div class="ba-grid">
 
@@ -607,7 +653,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
         </div>
         <div class="gbp-rating">
           <span class="gbp-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span class="gbp-rating-text">5.0 rating on Google</span>
+          <span class="gbp-rating-text">5.0 rating from 13 Google reviews</span>
         </div>
         <div class="gbp-actions">
           <a href="https://share.google/yb6m9uF4kmC06YSbv" target="_blank" rel="noopener" class="btn btn-blue btn-full">View Google Profile</a>
@@ -649,6 +695,27 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
     <p class="sec-sub">Straight from Google. Real customers, real jobs.</p>
 
     <div class="rev-grid">
+
+      <div class="rev-card">
+        <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rev-g"><span class="rev-g-badge">G</span> Google Review</div>
+        <p class="rev-text">Jeremy came out same day on short notice and detailed both of our vehicles. He and his helper took their time and did a fantastic job. Highly satisfied!</p>
+        <div class="rev-who"><div class="rev-name-block"><div class="rev-av">J</div><div><div class="rev-name">Jonathan Hyman</div><div class="rev-svc">Newest Google review</div></div></div></div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rev-g"><span class="rev-g-badge">G</span> Google Review</div>
+        <p class="rev-text">Did an amazing job on my car! I’m so impressed and have really recommended Jeremy to coworkers and family.</p>
+        <div class="rev-who"><div class="rev-name-block"><div class="rev-av">M</div><div><div class="rev-name">Megan Davis</div><div class="rev-svc">4 reviews</div></div></div></div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rev-g"><span class="rev-g-badge">G</span> Google Review</div>
+        <p class="rev-text">10/10 recommend!</p>
+        <div class="rev-who"><div class="rev-name-block"><div class="rev-av">B</div><div><div class="rev-name">Beth</div><div class="rev-svc">4 reviews</div></div></div></div>
+      </div>
 
       <div class="rev-card">
         <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -775,7 +842,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
       <div class="quote-info">
         <p class="sec-label">Get In Touch</p>
         <h2 class="sec-title">Request a<br>Quote</h2>
-        <p>Fill out the form and we will reach back out with the right service and fairest price for your vehicle. A booking deposit may be required when you choose an appointment time.</p>
+        <p>Fill this out once and your phone will open a ready-to-send text with the details. We will review it and follow up with the right service and fairest price for your vehicle.</p>
         <div class="contact-rows">
           <div class="contact-row"><span class="contact-icon">&#128222;</span><span><a href="tel:+13367507402">(336) 750-7402</a></span></div>
           <div class="contact-row"><span class="contact-icon">&#9993;</span><span><a href="mailto:1018mobiledetailing@gmail.com">1018mobiledetailing@gmail.com</a></span></div>
@@ -798,7 +865,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
           <div class="fgrp"><label class="flabel" for="ln">Last Name</label><input class="finput" type="text" id="ln" placeholder="Smith" required></div>
         </div>
         <div class="frow">
-          <div class="fgrp"><label class="flabel" for="em">Email</label><input class="finput" type="email" id="em" placeholder="you@email.com" required></div>
+          <div class="fgrp"><label class="flabel" for="em">Email <span style="text-transform:none;font-weight:500">(optional)</span></label><input class="finput" type="email" id="em" placeholder="you@email.com"></div>
           <div class="fgrp"><label class="flabel" for="ph">Phone</label><input class="finput" type="tel" id="ph" placeholder="(336) 555-0000" required></div>
         </div>
         <div class="fgrp">
@@ -806,10 +873,10 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
           <select class="finput" id="sv" required>
             <option value="" disabled selected>Select a service</option>
             <optgroup label="Auto Care">
-              <option>Essential Detail (starting at $95)</option>
-              <option>Full Detail (starting at $225)</option>
+              <option>Essential Detail (starting at $150)</option>
+              <option>Premium Detail (starting at $225)</option>
               <option>Deep Clean / Restoration Detail (custom quote)</option>
-              <option>Recurring Maintenance Detail (plans from $85)</option>
+              <option>Recurring Maintenance Detail (custom quote)</option>
             </optgroup>
             <optgroup label="Pressure Washing">
               <option>Driveway / Concrete (quote)</option>
@@ -851,7 +918,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
         <div class="pricing-note" style="margin:0 0 .9rem"><strong>Photos help us price fairly:</strong> Please send photos of the front seats, rear seats, floors/carpets, cargo area, and any stains, pet hair, spills, or problem areas by text or email after submitting this form. A dirty vehicle does not automatically mean an expensive detail.</div>
         <div class="fgrp"><label class="flabel" for="nt">Notes</label><textarea class="finput" id="nt" placeholder="Pet hair, stains, siding type, gate code, anything helpful"></textarea></div>
 
-        <button type="button" class="fsub" id="fsb" onclick="sendQuote()">Send Quote Request</button>
+        <button type="button" class="fsub" id="fsb" onclick="sendQuote()">Text My Quote Request</button>
         <p class="fnote">No payment is collected with this quote request. A booking deposit may be required later and is applied to your final balance. By booking, you agree to the <a href="terms.html" style="color:var(--blue);text-decoration:underline">1018 Mobile Detailing Terms &amp; Conditions</a> and cancellation policy.</p>
       </div>
     </div>
@@ -915,7 +982,6 @@ function sendQuote(){
   var fields = [
     {id:'fn', label:'First Name'},
     {id:'ln', label:'Last Name'},
-    {id:'em', label:'Email'},
     {id:'ph', label:'Phone'},
     {id:'sv', label:'Service'},
     {id:'dt', label:'Date'},
@@ -933,7 +999,7 @@ function sendQuote(){
   }
 
   var em = document.getElementById('em').value;
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){
+  if(em && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){
     showStatus('err','Please enter a valid email address.');
     return;
   }
@@ -943,7 +1009,7 @@ function sendQuote(){
     '================================\n' +
     'Name:     ' + document.getElementById('fn').value + ' ' + document.getElementById('ln').value + '\n' +
     'Phone:    ' + document.getElementById('ph').value + '\n' +
-    'Email:    ' + document.getElementById('em').value + '\n' +
+    'Email:    ' + (document.getElementById('em').value || 'Not provided') + '\n' +
     'Service:  ' + document.getElementById('sv').value + '\n' +
     'Date:     ' + document.getElementById('dt').value + '\n' +
     'Time:     ' + (document.getElementById('tm').value || 'No preference') + '\n' +
@@ -951,21 +1017,21 @@ function sendQuote(){
     'Vehicle:  ' + (document.getElementById('vh').value || 'Not specified') + '\n' +
     'Condition:' + document.getElementById('cn').value + '\n' +
     'Notes:    ' + (document.getElementById('nt').value || 'None') + '\n' +
-    'Photos:   Customer asked to send photos by text or email\n' +
+    'Photos:   I can attach condition photos in this text thread\n' +
     '================================';
 
-  var subject = encodeURIComponent('Quote Request, ' + document.getElementById('fn').value + ' ' + document.getElementById('ln').value);
   var bodyEnc = encodeURIComponent(body);
+  var separator = /iPad|iPhone|iPod/.test(navigator.userAgent) ? '&' : '?';
 
-  window.location.href = 'mailto:1018mobiledetailing@gmail.com?subject=' + subject + '&body=' + bodyEnc;
+  window.location.href = 'sms:+13367507402' + separator + 'body=' + bodyEnc;
 
   btn.disabled = true;
-  showStatus('ok', 'Opening your email app with the request filled in. Hit send and we will be in touch.');
-  btn.textContent = 'Opening Email App';
+  showStatus('ok', 'Opening your text app with the request filled in. Attach any helpful photos, then hit send.');
+  btn.textContent = 'Opening Text App';
 
   setTimeout(function(){
     btn.disabled = false;
-    btn.textContent = 'Send Quote Request';
+    btn.textContent = 'Text My Quote Request';
   }, 5000);
 }
 
