@@ -827,7 +827,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
       <div class="quote-info">
         <p class="sec-label">Get In Touch</p>
         <h2 class="sec-title">Request a<br>Quote</h2>
-        <p>Fill this out once and your phone will open a ready-to-send text with the details. We will review it and follow up with the right service and fairest price for your vehicle.</p>
+        <p>Fill this out once and your email app will open a ready-to-send message to 1018mobiledetailing@gmail.com. We will review it and follow up with the right service and fairest price for your vehicle.</p>
         <div class="contact-rows">
           <div class="contact-row"><span class="contact-icon">&#128222;</span><span><a href="tel:+13367507402">(336) 750-7402</a></span></div>
           <div class="contact-row"><span class="contact-icon">&#9993;</span><span><a href="mailto:1018mobiledetailing@gmail.com">1018mobiledetailing@gmail.com</a></span></div>
@@ -906,7 +906,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:2.5rem 5% 1
         <div class="pricing-note" style="margin:0 0 .9rem"><strong>Photos help us price fairly:</strong> Please send photos of the front seats, rear seats, floors/carpets, cargo area, and any stains, pet hair, spills, or problem areas by text or email after submitting this form. A dirty vehicle does not automatically mean an expensive detail.</div>
         <div class="fgrp"><label class="flabel" for="nt">Notes</label><textarea class="finput" id="nt" placeholder="Pet hair, stains, siding type, gate code, anything helpful"></textarea></div>
 
-        <button type="button" class="fsub" id="fsb" onclick="sendQuote()">Text My Quote Request</button>
+        <button type="button" class="fsub" id="fsb" onclick="sendQuote()">Email My Quote Request</button>
         <p class="fnote">No payment is collected with this quote request. A booking deposit may be required later and is applied to your final balance. By booking, you agree to the <a href="terms.html" style="color:var(--blue);text-decoration:underline">1018 Mobile Detailing Terms &amp; Conditions</a> and cancellation policy.</p>
       </div>
     </div>
@@ -963,6 +963,27 @@ var dt = document.getElementById('dt');
 var tmr = new Date(); tmr.setDate(tmr.getDate()+1);
 dt.min = tmr.toISOString().split('T')[0];
 
+function buildQuoteEmailUrl(){
+  var body =
+    'NEW QUOTE REQUEST, 1018 MOBILE DETAILING\n' +
+    '================================\n' +
+    'Name:     ' + document.getElementById('fn').value + ' ' + document.getElementById('ln').value + '\n' +
+    'Phone:    ' + document.getElementById('ph').value + '\n' +
+    'Email:    ' + (document.getElementById('em').value || 'Not provided') + '\n' +
+    'Service:  ' + document.getElementById('sv').value + '\n' +
+    'Date:     ' + document.getElementById('dt').value + '\n' +
+    'Time:     ' + (document.getElementById('tm').value || 'No preference') + '\n' +
+    'Address:  ' + document.getElementById('ad').value + '\n' +
+    'Vehicle:  ' + (document.getElementById('vh').value || 'Not specified') + '\n' +
+    'Condition:' + document.getElementById('cn').value + '\n' +
+    'Notes:    ' + (document.getElementById('nt').value || 'None') + '\n' +
+    'Photos:   I can attach condition photos to this email\n' +
+    '================================';
+
+  var subject = 'Quote Request - ' + document.getElementById('fn').value + ' ' + document.getElementById('ln').value;
+  return 'mailto:1018mobiledetailing@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+}
+
 function sendQuote(){
   var btn = document.getElementById('fsb');
   var fs  = document.getElementById('fs');
@@ -992,34 +1013,15 @@ function sendQuote(){
     return;
   }
 
-  var body =
-    'NEW QUOTE REQUEST, 1018 MOBILE DETAILING\n' +
-    '================================\n' +
-    'Name:     ' + document.getElementById('fn').value + ' ' + document.getElementById('ln').value + '\n' +
-    'Phone:    ' + document.getElementById('ph').value + '\n' +
-    'Email:    ' + (document.getElementById('em').value || 'Not provided') + '\n' +
-    'Service:  ' + document.getElementById('sv').value + '\n' +
-    'Date:     ' + document.getElementById('dt').value + '\n' +
-    'Time:     ' + (document.getElementById('tm').value || 'No preference') + '\n' +
-    'Address:  ' + document.getElementById('ad').value + '\n' +
-    'Vehicle:  ' + (document.getElementById('vh').value || 'Not specified') + '\n' +
-    'Condition:' + document.getElementById('cn').value + '\n' +
-    'Notes:    ' + (document.getElementById('nt').value || 'None') + '\n' +
-    'Photos:   I can attach condition photos in this text thread\n' +
-    '================================';
-
-  var bodyEnc = encodeURIComponent(body);
-  var separator = /iPad|iPhone|iPod/.test(navigator.userAgent) ? '&' : '?';
-
-  window.location.href = 'sms:+13367507402' + separator + 'body=' + bodyEnc;
+  window.location.href = buildQuoteEmailUrl();
 
   btn.disabled = true;
-  showStatus('ok', 'Opening your text app with the request filled in. Attach any helpful photos, then hit send.');
-  btn.textContent = 'Opening Text App';
+  showStatus('ok', 'Opening your email app with the request addressed to 1018mobiledetailing@gmail.com. Attach any helpful photos, then hit send.');
+  btn.textContent = 'Opening Email App';
 
   setTimeout(function(){
     btn.disabled = false;
-    btn.textContent = 'Text My Quote Request';
+    btn.textContent = 'Email My Quote Request';
   }, 5000);
 }
 
